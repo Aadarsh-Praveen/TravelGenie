@@ -126,23 +126,25 @@ Upon entering a **destination & preferences**, OpenAI generates **detailed recom
 
 ---
 
-
-##📸 **Snapshots of TravelGenie Setup**
+## 📸 Snapshots of TravelGenie Setup
 Below are snapshots of how the TravelGenie system is structured and works:
 
 1️⃣ Voiceflow Chatbot Setup
 💬 This shows the Voiceflow conversation flow, how the bot interacts with the user, and API calls.
+
 📌 Snapshot:
 
 2️⃣ Airtable Data Storage
 🗂 This displays how user travel plans are stored in Airtable after using the bot.
+
 📌 Snapshot:
 
 3️⃣ Google Calendar Integration
 📅 This confirms that the travel dates are successfully added to Google Calendar.
+
 📌 Snapshot:
 
 4️⃣ Email Confirmation
 📧 A snapshot of the email sent by the bot containing the trip details & recommendations.
-📌 Snapshot:
 
+📌 Snapshot:
