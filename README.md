@@ -124,26 +124,25 @@ TravelGenie is an AI-driven travel assistant that streamlines travel planning by
 ## 🧠 **AI-Generated Recommendations**
 Upon entering a **destination & preferences**, OpenAI generates **detailed recommendations** for places, hotels, and restaurants.
 
-📌 **Example for Destination: Ireland | Preferences: Nature**  
+---
 
-### **Accommodations:**  
-1. The Merrion Hotel, Dublin - A luxurious 5-star hotel with a serene garden and Irish charm.  
-2. Ashford Castle - A medieval castle-turned-hotel surrounded by stunning landscapes.  
-3. Glenlo Abbey Hotel - A peaceful retreat near Galway with an old-world charm.  
 
-### **Popular Places:**  
-1. Cliffs of Moher - Spectacular sea cliffs located in County Clare offering stunning views of the Atlantic Ocean.  
-2. Killarney National Park - A beautiful park in County Kerry with lakes, mountains, and woodlands perfect for hiking and wildlife spotting.  
-3. The Ring of Kerry - A scenic drive around the Iveragh Peninsula with breathtaking coastal views and picturesque villages.  
-4. Connemara National Park - Located in County Galway, this park offers rugged landscapes, mountains, and lakes for outdoor enthusiasts.  
+##📸 **Snapshots of TravelGenie Setup**
+Below are snapshots of how the TravelGenie system is structured and works:
 
-### **Restaurants:**  
-1. The Strawberry Tree (Wicklow) - Ireland's only certified organic restaurant offering locally sourced dishes in a beautiful setting.  
-2. The Chart House (Dingle) - A seafood restaurant in County Kerry known for its fresh, locally caught seafood and stunning views of Dingle Bay.  
-3. Wild Honey Inn (Clare) - A Michelin-starred restaurant in County Clare known for its creative dishes using locally sourced ingredients.  
-4. The Fatted Calf (Westmeath) - A popular restaurant in County Westmeath known for its farm-to-table approach and delicious seasonal menus.  
+1️⃣ Voiceflow Chatbot Setup
+💬 This shows the Voiceflow conversation flow, how the bot interacts with the user, and API calls.
+📌 Snapshot:
 
-### **Activities:**  
-1. Hiking in the Wicklow Mountains - Explore the scenic trails in the Wicklow Mountains National Park for a day of hiking and enjoying nature.  
-2. Kayaking in Killarney Lakes - Rent a kayak and paddle through the tranquil lakes of Killarney National Park for a unique perspective.  
+2️⃣ Airtable Data Storage
+🗂 This displays how user travel plans are stored in Airtable after using the bot.
+📌 Snapshot:
+
+3️⃣ Google Calendar Integration
+📅 This confirms that the travel dates are successfully added to Google Calendar.
+📌 Snapshot:
+
+4️⃣ Email Confirmation
+📧 A snapshot of the email sent by the bot containing the trip details & recommendations.
+📌 Snapshot:
 
