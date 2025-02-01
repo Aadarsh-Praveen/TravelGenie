@@ -1,216 +1,149 @@
-# TravelGenie
+# 📌 TravelGenie - AI-Powered Travel Planner 🚀
 
+## 🌍 Overview  
+TravelGenie is an AI-driven travel assistant that streamlines travel planning by integrating **Google Calendar, Airtable, OpenAI’s recommendation API, and Email services**. Users can input their **destination, dates, and preferences**, and the system automatically handles:  
 
-**#Overview
+✔ **Trip Planning** (via OpenAI for recommendations)  
+✔ **Storing Travel Details** (via Airtable)  
+✔ **Adding Events to Google Calendar**  
+✔ **Sending Personalized Travel Emails**  
 
-TravelGenie is an interactive API-driven project designed to streamline travel planning by
-integrating user input with Google Calendar, Airtable, OpenAI’s recommendation API, and email
-services. Users can input their destination, dates, and preferences, and the system handles trip
-planning, storing data, generating recommendations, and sending personalized emails.
-Features
-1. Travel Plan
-○
-Captures user input for destination, dates, and preferences.
-○
-Validates and processes user-provided details.
-2. Save Plan
-○
-Stores the user’s travel details in Airtable for record-keeping.
-3. Add Calendar
-○
-Adds travel dates to Google Calendar for easy tracking.
-4. Send Email
-○
-Sends a personalized email to the user with their travel details and
-OpenAI-generated recommendations.
-Endpoints
-1. Travel Plan Endpoint
-URL: /travel-plan
-Method: POST
-Description: Processes user travel details.
-Request Body:
+🔗 **Live Website:** [TravelGenie Chatbot](https://sites.google.com/view/travelgenie-chatbot/home)
+
+---
+
+## ✨ Features
+1. **📅 Travel Planning:**  
+   - Captures **destination, dates, and user preferences**.  
+   - Generates **personalized recommendations** using OpenAI.  
+
+2. **🗄 Save Plan (Airtable Integration):**  
+   - Stores travel plans in **Airtable** for record-keeping.  
+
+3. **📆 Google Calendar Integration:**  
+   - Automatically **adds travel dates** as events in Google Calendar.  
+
+4. **📧 Email Notifications:**  
+   - Sends a **detailed travel itinerary** via email, including OpenAI-generated recommendations.  
+
+---
+
+## 🛠 API Endpoints
+
+### 1️⃣ **/travel-plan** - Capture Travel Details  
+**Method:** `POST`  
+**Request Body:**  
+```json
 {
-"User
-_
-Destination": "Paris"
-,
-"Start
-_
-Dates
-_
-and
-_
-End
-_
-Dates": "2025-05-10 to 2025-05-20"
-,
-"preferences": "food and culture"
+  "User_Destination": "Ireland",
+  "Start_Dates_and_End_Dates": "2025-04-04 to 2025-05-05",
+  "preferences": "nature"
 }
-Response:
+```
+📌 **Response Example:**  
+```json
 {
-"plan": {
-"destination": "Paris"
-,
-"dates": "2025-05-10 to 2025-05-20"
-,
-"preferences": "food and culture"
+  "plan": {
+    "destination": "Ireland",
+    "dates": "2025-04-04 to 2025-05-05",
+    "preferences": "nature"
+  }
 }
-}
-2. Save Plan Endpoint
-URL: /save-plan
-Method: POST
-Description: Saves the travel plan in Airtable.
-Request Body:
+```
+
+---
+
+### 2️⃣ **/save-plan** - Save Travel Plan to Airtable  
+**Method:** `POST`  
+**Request Body:**  
+```json
 {
-"User
-_
-Destination": "Paris"
-,
-"Start
-_
-Dates
-_
-and
-_
-End
-_
-Dates": "2025-05-10 to 2025-05-20"
-,
-"preferences": "food and culture"
+  "User_Destination": "Ireland",
+  "Start_Dates_and_End_Dates": "2025-04-04 to 2025-05-05",
+  "preferences": "nature"
 }
-Response:
+```
+📌 **Response Example:**  
+```json
 {
-"record": {
-"id": "rec12345"
-,
-"fields": {
-"Destination": "Paris"
-,
-"Dates": "2025-05-10 to 2025-05-20"
-,
-"Preferences": "food and culture"
+  "record": {
+    "id": "rec12345",
+    "fields": {
+      "Destination": "Ireland",
+      "Dates": "2025-04-04 to 2025-05-05",
+      "Preferences": "nature"
+    }
+  }
 }
-}
-}
-3. Add Calendar Endpoint
-URL: /add-calendar
-Method: POST
-Description: Adds the trip to Google Calendar.
-Request Body:
+```
+
+---
+
+### 3️⃣ **/add-calendar** - Add Event to Google Calendar  
+**Method:** `POST`  
+**Request Body:**  
+```json
 {
-"summary": "Paris"
-,
-"dates": "2025-05-10 to 2025-05-20"
+  "summary": "Trip to Ireland",
+  "dates": "2025-04-04 to 2025-05-05"
 }
-Response:
+```
+📌 **Response Example:**  
+```json
 {
-"message": "Event successfully added to Google Calendar.
-"
-,
-"event": {
-"id": "event123"
-,
-"htmlLink": "https://www.google.com/calendar/event?eid=abc123"
+  "message": "Event successfully added to Google Calendar.",
+  "event": {
+    "id": "event123",
+    "htmlLink": "https://www.google.com/calendar/event?eid=abc123"
+  }
 }
-}
-4. Send Email Endpoint
-URL: /send-email
-Method: POST
-Description: Sends a personalized email to the user with travel details and recommendations.
-Request Body:
+```
+
+---
+
+### 4️⃣ **/send-email** - Send Personalized Travel Plan via Email  
+**Method:** `POST`  
+**Request Body:**  
+```json
 {
-"user
-_
-email": "example@example.com"
-,
-"User
-_
-Destination": "Paris"
-,
-"Start
-_
-Dates
-_
-and
-_
-End
-_
-Dates": "2025-05-10 to 2025-05-20"
-,
-"preferences": "food and culture"
+  "user_email": "example@example.com",
+  "User_Destination": "Ireland",
+  "Start_Dates_and_End_Dates": "2025-04-04 to 2025-05-05",
+  "preferences": "nature"
 }
-Response:
+```
+📌 **Response Example:**  
+```json
 {
-"message": "Email sent successfully!"
+  "message": "Email sent successfully!"
 }
-Key Functionalities
-1. OpenAI Integration
-●
-Used to generate travel recommendations based on user preferences.
-●
-Recommendations include activities, restaurants, and local highlights.
-Code Reference: recommendation_integration.py
-2. Airtable Integration
-●
-Stores travel data for future reference.
-●
-Utilizes the Airtable API.
-Code Reference: airtable_integration.py
-3. Google Calendar Integration
-●
-Adds events to the user’s Google Calendar.
-●
-Uses Google Calendar API.
-Code Reference: calendar_integration.py
-4. Email Integration
-●
-Send travel details and recommendations via email.
-●
-Uses SMTP for email delivery.
-Code Reference: email_integration.py
-Setup Instructions
-1. Environment Variables
-●
-Airtable:
-○
-AIRTABLE_ACCESS_TOKEN: API key for Airtable.
-○
-AIRTABLE_BASE_ID: Base ID for Airtable.
-○
-AIRTABLE_TABLE_NAME: Name of the table.
-●
-Google Calendar:
-○
-GOOGLE_CREDENTIALS_FILE: Path to Google credentials JSON file.
-○
-SCOPES: Google API scopes.
-●
-OpenAI:
-○
-OPENAI_API_KEY: API key for OpenAI.
-●
-Email:
-○
-SMTP_SERVER, SMTP_PORT, EMAIL_ADDRESS, EMAIL_PASSWORD.
-2. Dependencies
-Install dependencies using:
-pip install flask flask-cors openai google-api-python-client requests python-dotenv
-3. Running the Application
-Start the Flask server:
-python main.py
-Testing
-Using Postman
-●
-Add JSON payloads to respective endpoints.
-●
-Verify the responses.
-Logging
-●
-Check logs in the console for detailed debugging information.
-Future Enhancements
-●
-User Authentication: Add authentication for enhanced security.
-●
-Multi-Language Support: Allow users to select their preferred language.
-●
-Payment Integration: Add payment options for booking.
+```
+
+---
+
+## 🧠 **AI-Generated Recommendations**
+Upon entering a **destination & preferences**, OpenAI generates **detailed recommendations** for places, hotels, and restaurants.
+
+📌 **Example for Destination: Ireland | Preferences: Nature**  
+
+### **Accommodations:**  
+1. The Merrion Hotel, Dublin - A luxurious 5-star hotel with a serene garden and Irish charm.  
+2. Ashford Castle - A medieval castle-turned-hotel surrounded by stunning landscapes.  
+3. Glenlo Abbey Hotel - A peaceful retreat near Galway with an old-world charm.  
+
+### **Popular Places:**  
+1. Cliffs of Moher - Spectacular sea cliffs located in County Clare offering stunning views of the Atlantic Ocean.  
+2. Killarney National Park - A beautiful park in County Kerry with lakes, mountains, and woodlands perfect for hiking and wildlife spotting.  
+3. The Ring of Kerry - A scenic drive around the Iveragh Peninsula with breathtaking coastal views and picturesque villages.  
+4. Connemara National Park - Located in County Galway, this park offers rugged landscapes, mountains, and lakes for outdoor enthusiasts.  
+
+### **Restaurants:**  
+1. The Strawberry Tree (Wicklow) - Ireland's only certified organic restaurant offering locally sourced dishes in a beautiful setting.  
+2. The Chart House (Dingle) - A seafood restaurant in County Kerry known for its fresh, locally caught seafood and stunning views of Dingle Bay.  
+3. Wild Honey Inn (Clare) - A Michelin-starred restaurant in County Clare known for its creative dishes using locally sourced ingredients.  
+4. The Fatted Calf (Westmeath) - A popular restaurant in County Westmeath known for its farm-to-table approach and delicious seasonal menus.  
+
+### **Activities:**  
+1. Hiking in the Wicklow Mountains - Explore the scenic trails in the Wicklow Mountains National Park for a day of hiking and enjoying nature.  
+2. Kayaking in Killarney Lakes - Rent a kayak and paddle through the tranquil lakes of Killarney National Park for a unique perspective.  
+
