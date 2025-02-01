@@ -146,12 +146,16 @@ Below are snapshots of how the TravelGenie system is structured and works:
 
 
 
+
+
 3️⃣ Google Calendar Integration
 📅 This confirms that the travel dates are successfully added to Google Calendar.
 
 📌 Snapshot:
 
 <img width="1459" alt="image" src="https://github.com/user-attachments/assets/193e49ca-add7-416b-9d28-7cc6e7dcc927" />
+
+
 
 
 
