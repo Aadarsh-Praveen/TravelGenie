@@ -121,8 +121,10 @@ TravelGenie is an AI-driven travel assistant that streamlines travel planning by
 
 ---
 
-## 🧠 **AI-Generated Recommendations**
-Upon entering a **destination & preferences**, OpenAI generates **detailed recommendations** for places, hotels, and restaurants.
+### 🧠 AI-Generated Recommendations  
+Upon entering a **destination & preferences**, OpenAI generates **detailed and personalized recommendations** for **places to visit, hotels to stay in, and restaurants to dine at**. The AI takes into account user preferences such as **nature, adventure, luxury, food, culture, and more**, ensuring that every traveler gets a tailored experience.  
+
+These recommendations **enhance the travel experience** by offering insights into **top-rated locations, must-visit attractions, and hidden gems** in the chosen destination. Whether you're looking for a **relaxing retreat, thrilling adventures, or fine dining experiences**, OpenAI helps curate the perfect itinerary based on real-world travel data.
 
 ---
 
